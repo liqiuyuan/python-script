@@ -19,5 +19,5 @@ def addition_func(x):
 
 
 result = addition_func(4)
-print result
+print(result)
 # Output: addition_func was called
