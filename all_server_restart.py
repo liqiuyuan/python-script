@@ -70,7 +70,7 @@ def getSid():
 
 # 按照步长(服务器id)均分列表,即分组长度
 def listGroups(init_list, childern_list_len):
-    listGroups = zip(*(iter(init_list),) *childern_list_len)
+    listGroups = zip(*(iter(init_list),) * childern_list_len)
     end_list = [list(i) for i in listGroups]
     count = len(init_list) % childern_list_len
     end_list.append(init_list[-count:]) if count != 0 else end_list
@@ -190,4 +190,3 @@ if __name__ == "__main__":
             logger.info("the all game server restart success!")
         else:
             print('Parameter error！Incoming parameter is not int')
-

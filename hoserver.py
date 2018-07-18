@@ -26,6 +26,7 @@ main_daemon = os.path.realpath(__file__)
 # 游戏服配置文件
 CONFFILE = '%s/config.prop' % basedir
 
+
 def getCmd():
     # 启动参数，如果存在游戏目录存在javaopt.conf，则java参数从这个文件获取
     # 否则从javaop.py读取，主要是中心服java参数

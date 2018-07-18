@@ -4,6 +4,7 @@
 from functools import wraps
 from datetime import datetime
 
+
 def log_func(func):
     @wraps(func)
     def logger(*args, **kwargs):
@@ -12,10 +13,11 @@ def log_func(func):
         return func(*args, **kwargs)
     return logger
 
+
 @log_func
 def addition_func(x):
-   """Do some math."""
-   return x + x
+    """Do some math."""
+    return x + x
 
 
 result = addition_func(4)

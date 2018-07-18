@@ -13,7 +13,7 @@ with open('build.conf') as f:
     nowBuildVersion = ''.join(f.read().split('"')[1].split(':'))
 print(nowBuildVersion)
 
-for dirpath,dirnames,filenames in os.walk(packageDir):
+for dirpath, dirnames, filenames in os.walk(packageDir):
     for filename in filenames:
         filepath = os.path.join(dirpath, filename)
         suffixName = os.path.splitext(filepath)[1]
@@ -24,20 +24,12 @@ for dirpath,dirnames,filenames in os.walk(packageDir):
             zipf.extractall(zipSdkDir)
 
 with open('%s/build/build_source.txt' % zipSdkDir) as f:
-        buildFile = f.readlines()[0]
-        buildFile = "".join(buildFile)
-        buildVersion = buildFile.strip('\r\n').split('\\')[-4]
+    buildFile = f.readlines()[0]
+    buildFile = "".join(buildFile)
+    buildVersion = buildFile.strip('\r\n').split('\\')[-4]
 
 if nowBuildVersion == buildVersion:
     print('The right sdk build version')
 else:
     print('The wrong sdk builed version, Please chechk!')
     shutil.rmtree(zipSdkDir)
-
-
-
-
-
-
-
-
