@@ -50,6 +50,7 @@ def sendmail(sender, receiver, mail_host, mail_user, mail_pass, url, code):
     except smtplib.SMTPException as e:
         print("Error: ", e)
 
+
 if __name__ == "__main__":
     urlList = getUrlList('url.txt')
     for url in urlList:
