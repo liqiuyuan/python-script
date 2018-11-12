@@ -41,7 +41,7 @@ class AliyunRunInstances(object):
         # 镜像ID
         self.image_id = 'centos_6_08_64_20G_alibase_20170824.vhd'
         # 指定新创建实例所属于的安全组ID
-        self.security_group_id = 'sg-11smg8jwi'
+        self.security_group_id = 'xxx'
         # 实例名称
         self.instance_name = hostName
         # 实例的密码
