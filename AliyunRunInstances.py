@@ -9,8 +9,8 @@ from aliyunsdkcore.acs_exception.exceptions import ClientException, ServerExcept
 from aliyunsdkecs.request.v20140526.RunInstancesRequest import RunInstancesRequest
 from aliyunsdkecs.request.v20140526.DescribeInstancesRequest import DescribeInstancesRequest
 
-AccessKey = 'xxx'
-AccessSecret = 'xxx'
+AccessKey = 'LTAIjvx7xhOD93mM'
+AccessSecret = 'NEhTr6fczGWsCrXW8l3UL8LpQ6Z1mb'
 RUNNING_STATUS = 'Running'
 CHECK_INTERVAL = 3
 CHECK_TIMEOUT = 180
@@ -155,5 +155,5 @@ class AliyunRunInstances(object):
 
 
 if __name__ == '__main__':
-    hostname = str(raw_input("Please input the hostname(like: HT-GS1):").strip())
+    hostname = str(raw_input("Please input the hostname: (like: HT-GS1)"))
     AliyunRunInstances(AccessKey, AccessSecret, hostname).run()
