@@ -45,7 +45,7 @@ class AliyunRunInstances(object):
         # 实例名称
         self.instance_name = hostName
         # 实例的密码
-        self.password = '519F933a%C01B2e3'
+        self.password = 'xxxx'
         # 指定创建ECS实例的数量
         self.amount = 1
         # 公网出带宽最大值
