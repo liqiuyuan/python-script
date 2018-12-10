@@ -141,6 +141,7 @@ class AliyunRunInstances(object):
                 if RUNNING_STATUS in instance['Status']:
                     instance_ids.remove(instance['InstanceId'])
                     print('Instance boot successfully: {}'.format(instance['InstanceId']))
+                    print('Instance PublicIpAddress:{0}, InnerIpAddress:{1}'.format(instance['PublicIpAddress']['IpAddress'], instance['InnerIpAddress']['IpAddress']))
 
             if not instance_ids:
                 print('Instances all boot successfully')
@@ -155,5 +156,5 @@ class AliyunRunInstances(object):
 
 
 if __name__ == '__main__':
-    hostname = str(raw_input("Please input the hostname: (like: HT-GS1)"))
+    hostname = str(raw_input("Please input the hostname: (like: HT-GS1)").strip())
     AliyunRunInstances(AccessKey, AccessSecret, hostname).run()
