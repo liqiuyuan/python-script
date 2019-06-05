@@ -134,9 +134,10 @@ class Daemon:
         # stop app
         self.stopPrograme()
 
-    def restart(self, *args, **kwargs):
+    def restart(self):
         self.stop()
-        self.start(*args, **kwargs)
+        self.start(True)
+
 
     def is_running(self):
         pid = self.get_pid()
