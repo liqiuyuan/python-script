@@ -164,6 +164,7 @@ class AppDaemon(Daemon):
     def stopPrograme(self):
         pass
 
+
 if __name__ == '__main__':
     basePath = os.path.dirname(os.path.abspath(__file__))
     appName = os.path.split(basePath)[-1]
