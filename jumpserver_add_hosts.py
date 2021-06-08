@@ -79,7 +79,7 @@ def assent_add(token, jms_host, assets, ip):
         logging.info('%s' % (json.dumps(assets)))
 
 
-jms_host = 'http://172.16.100.239:8080'
+jms_host = 'http://jumpserver'
 token = get_token(jms_host)
 host_list = sys.argv[1].split(',')
 admin_user = get_admin_user(token, jms_host, sys.argv[2])
