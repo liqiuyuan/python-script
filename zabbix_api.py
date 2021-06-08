@@ -6,7 +6,7 @@ import sys
 import time
 
 basedir = os.path.dirname(os.path.abspath(__file__))
-zapi = ZabbixAPI(f"http://121.46.237.2:8789/")
+zapi = ZabbixAPI(f"http://ip/")
 zapi.login("xxxxx", "xxxx")
 
 
